@@ -1,19 +1,17 @@
-# Perfilado no supervisado de eventos de fuego en Paraguay durante 2024
+# PyroTrack Clustering Paraguay 2024
 
-Este proyecto aplica técnicas de aprendizaje no supervisado para identificar perfiles de eventos de fuego en Paraguay durante 2024, utilizando productos PyroTrack FEDS-like derivados de detecciones satelitales VIIRS/FIRMS.
+Proyecto final de aprendizaje no supervisado aplicado al perfilado de eventos de fuego en Paraguay durante 2024.
 
-## Objetivo
-
-Identificar grupos de eventos de fuego con características similares a partir de atributos espaciales, temporales, geométricos y de intensidad.
+El objetivo es identificar perfiles de eventos de fuego mediante clustering, usando atributos espaciales, temporales, geométricos y de intensidad derivados de productos PyroTrack FEDS-like.
 
 ## Dataset
 
-El dataset principal se encuentra en:
+El dataset principal corresponde a eventos de fuego refinados para Paraguay en 2024:
 
 - `data/processed/fire_summary_refined_2024.csv`
 - `data/geo/fire_perimeters_refined_2024.gpkg`
 
-El producto contiene objetos de fuego refinados generados mediante una cadena PyroTrack FEDS-like, basada en detecciones activas satelitales, agrupamiento espacio-temporal, seguimiento de eventos y generación de perímetros.
+El producto fue generado a partir de detecciones activas VIIRS/FIRMS mediante una cadena PyroTrack FEDS-like, que agrupa detecciones espacio-temporales, realiza seguimiento de objetos de fuego y genera perímetros mediante geometrías tipo alpha-shape.
 
 ## Metodología prevista
 
@@ -31,7 +29,7 @@ Se evaluarán al menos dos algoritmos de clustering:
 - HDBSCAN o DBSCAN.
 - Agglomerative Clustering o Gaussian Mixture Model.
 
-K-Means podrá utilizarse únicamente como referencia.
+K-Means podrá utilizarse como referencia, pero no como uno de los dos modelos principales.
 
 ## Métricas
 
@@ -47,6 +45,16 @@ K-Means podrá utilizarse únicamente como referencia.
 - Comparación de métricas entre modelos.
 - Perfil de variables por cluster.
 
-## Autores
+## Estructura
 
+
+data/
+  processed/
+  geo/
+notebooks/
+results/
+  figures/
+docs/
+
+Autor
 Diego Baez
